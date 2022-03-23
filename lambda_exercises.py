@@ -9,6 +9,8 @@ Odd numbers from the said list:
 """
 
 
+
+
 listyboi = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 output = list(filter(lambda n: (n % 2 == 0), listyboi))
@@ -94,14 +96,13 @@ print(output)
 check whether a given string contains a capital letter, a lower case letter, a number and a minimum length of 8 characters.
 (This is like a password verification function, HINT: Python function 'any' may be useful)
 """
-x = "Ax10000"
+x = "Axxxxxxxxx1"
 # what??????
 isupperletter = lambda n: n.isupper()
 islowerletter = lambda n: n.islower()
 isnumber = lambda n: n in ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
-print(any(list(any(filter(islowerletter, x))))
-
+print(any(filter(isupperletter,x))==any(filter(islowerletter,x))==any(filter(isnumber,x))==(7<=len(x)))
 
 """ 7)
 Write a Python program to sort a list of tuples using Lambda.
@@ -119,5 +120,5 @@ original_scores = [
     ("Social sciences", 82),
 ]
 
-ordered_scores = sorted(original_scores)
+ordered_scores = sorted(original_scores,key=lambda x:x[1])
 print(ordered_scores)
