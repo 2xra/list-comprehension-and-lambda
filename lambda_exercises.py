@@ -9,8 +9,6 @@ Odd numbers from the said list:
 """
 
 
-
-
 listyboi = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 output = list(filter(lambda n: (n % 2 == 0), listyboi))
@@ -101,8 +99,14 @@ x = input("what's the password?")
 isupperletter = lambda n: n.isupper()
 islowerletter = lambda n: n.islower()
 isnumber = lambda n: n in ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
-print('is that a valid password? let\'s findout')
-print(any(filter(isupperletter,x))==any(filter(islowerletter,x))==any(filter(isnumber,x))==(7<=len(x)))
+print("is that a valid password? let's findout")
+print(
+    any(filter(isupperletter, x))
+    == any(filter(islowerletter, x))
+    == any(filter(isnumber, x))
+    == (7 <= len(x))
+    == True
+)
 
 """ 7)
 Write a Python program to sort a list of tuples using Lambda.
@@ -120,5 +124,5 @@ original_scores = [
     ("Social sciences", 82),
 ]
 
-ordered_scores = sorted(original_scores,key=lambda x:x[1])
+ordered_scores = sorted(original_scores, key=lambda x: x[1])
 print(ordered_scores)
